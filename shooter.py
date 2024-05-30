@@ -93,8 +93,6 @@ class GameState:
 crosshair_group = pygame.sprite.Group()
 crosshair = Crosshair("crosshair.png")
 crosshair_group.add(crosshair)
-#target_group = create_targets()
-
 game = GameState()
 
 
