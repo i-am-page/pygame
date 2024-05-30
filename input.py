@@ -30,7 +30,7 @@ while True:
                 color = color_passive
         if event.type == pygame.KEYDOWN:
             if active:
-                if event.key ==pygame.K_RETURN:
+                if event.key == pygame.K_RETURN:
                     user_text = "Checkmate"
                 if event.key == pygame.K_BACKSPACE:
                     user_text = user_text[:-1]
