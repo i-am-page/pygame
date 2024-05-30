@@ -1,23 +1,12 @@
-def isValid(s):
-    arr1 = []
-    if len(s) == 0:
-        return True
-    for i in s:
-        if i == "(" or i == "[" or i == "{":
-            arr1.append(i)
-        elif i == ")" and len(arr1) and arr1[-1] == "(":
-            arr1.pop()
-        elif i == "]" and len(arr1) and arr1[-1] == "[":
-            arr1.pop()
-        elif i == "}" and len(arr1) and arr1[-1] == "{":
-            arr1.pop()
-        else: return False
-            
-    return True if len(arr1) == 0 else False
+def removeDuplicates(nums):
+    j = 0
+    for i in range(1, len(nums)):
+        if i != len(nums) and nums[i] != nums[i - 1]:
+            nums[j] = nums[i - 1]
+            nums[j+1] = nums[i]
+            j += 1
+    return nums,j+1
 
 
-print(isValid("()"))
-print(isValid("()[]{}"))
-print(isValid("(]"))
-print(isValid("("))
-print(isValid(")"))
+print(removeDuplicates([1, 1, 2]))
+print(removeDuplicates([0,0,1,1,1,2,2,3,3,4]))
