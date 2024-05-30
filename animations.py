@@ -30,36 +30,16 @@ class Player(pygame.sprite.Sprite):
         self.cur_index = 0
         self.is_animating = animating
         self.frames = []
-        self.frames.append(
-            pygame.transform.scale(pygame.image.load("frogs/frame_0.png"), SCALE_FACTOR)
-        )
-        self.frames.append(
-            pygame.transform.scale(pygame.image.load("frogs/frame_1.png"), SCALE_FACTOR)
-        )
-        self.frames.append(
-            pygame.transform.scale(pygame.image.load("frogs/frame_2.png"), SCALE_FACTOR)
-        )
-        self.frames.append(
-            pygame.transform.scale(pygame.image.load("frogs/frame_3.png"), SCALE_FACTOR)
-        )
-        self.frames.append(
-            pygame.transform.scale(pygame.image.load("frogs/frame_4.png"), SCALE_FACTOR)
-        )
-        self.frames.append(
-            pygame.transform.scale(pygame.image.load("frogs/frame_5.png"), SCALE_FACTOR)
-        )
-        self.frames.append(
-            pygame.transform.scale(pygame.image.load("frogs/frame_6.png"), SCALE_FACTOR)
-        )
-        self.frames.append(
-            pygame.transform.scale(pygame.image.load("frogs/frame_7.png"), SCALE_FACTOR)
-        )
-        self.frames.append(
-            pygame.transform.scale(pygame.image.load("frogs/frame_8.png"), SCALE_FACTOR)
-        )
-        self.frames.append(
-            pygame.transform.scale(pygame.image.load("frogs/frame_9.png"), SCALE_FACTOR)
-        )
+        self.frames.append(pygame.transform.scale(pygame.image.load("frogs/frame_0.png"), SCALE_FACTOR))
+        self.frames.append(pygame.transform.scale(pygame.image.load("frogs/frame_1.png"), SCALE_FACTOR))
+        self.frames.append(pygame.transform.scale(pygame.image.load("frogs/frame_2.png"), SCALE_FACTOR))
+        self.frames.append(pygame.transform.scale(pygame.image.load("frogs/frame_3.png"), SCALE_FACTOR))
+        self.frames.append(pygame.transform.scale(pygame.image.load("frogs/frame_4.png"), SCALE_FACTOR))
+        self.frames.append(pygame.transform.scale(pygame.image.load("frogs/frame_5.png"), SCALE_FACTOR))
+        self.frames.append(pygame.transform.scale(pygame.image.load("frogs/frame_6.png"), SCALE_FACTOR))
+        self.frames.append(pygame.transform.scale(pygame.image.load("frogs/frame_7.png"), SCALE_FACTOR))
+        self.frames.append(pygame.transform.scale(pygame.image.load("frogs/frame_8.png"), SCALE_FACTOR))
+        self.frames.append(pygame.transform.scale(pygame.image.load("frogs/frame_9.png"), SCALE_FACTOR))
 
         self.image = self.frames[self.cur_index]
         self.rect = self.image.get_rect()
