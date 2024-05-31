@@ -1,12 +1,11 @@
-def removeDuplicates(nums):
-    j = 0
-    for i in range(1, len(nums)):
-        if i != len(nums) and nums[i] != nums[i - 1]:
-            nums[j] = nums[i - 1]
-            nums[j+1] = nums[i]
-            j += 1
-    return nums,j+1
+def removeElement(nums, val):
+    j=0
+    for i in range(len(nums)):
+        if nums[i] != val:
+            nums[j]=nums[i]
+            j+=1
+    return nums,j
 
 
-print(removeDuplicates([1, 1, 2]))
-print(removeDuplicates([0,0,1,1,1,2,2,3,3,4]))
+print(removeElement([3, 2, 2, 3], 3))
+print(removeElement([0,1,2,2,3,0,4,2],2))
