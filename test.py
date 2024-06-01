@@ -1,11 +1,11 @@
-def removeElement(nums, val):
-    j=0
-    for i in range(len(nums)):
-        if nums[i] != val:
-            nums[j]=nums[i]
-            j+=1
-    return nums,j
+def strStr(haystack, needle):
+        for i in range(len(haystack)):
+            #print("???: ",haystack[i], needle[0], haystack[i:i+len(needle)])
+            if haystack[i] == needle[0] and haystack[i : i + len(needle)] == needle:
+                #print(i)
+                return i
+        return -1
 
 
-print(removeElement([3, 2, 2, 3], 3))
-print(removeElement([0,1,2,2,3,0,4,2],2))
+print(strStr("sadbutsad", "sad"))
+#print(strStr("leetcode","leeto"))

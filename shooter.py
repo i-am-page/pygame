@@ -43,6 +43,7 @@ class Crosshair(pygame.sprite.Sprite):
         self.rect.center = pygame.mouse.get_pos()
 
 
+
 class Target(pygame.sprite.Sprite):
     def __init__(self, path, pos) -> None:
         super().__init__()

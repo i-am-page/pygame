@@ -37,6 +37,8 @@ class Bullet(pygame.sprite.Sprite):
 
         if self.rect.x > SCREEN_WIDTH + 100:
             self.kill()
+        if self.rect.x < 0 - 100:
+            self.kill()
 
 
 player = Player()
@@ -59,4 +61,4 @@ while True:
     player_group.update(pygame.mouse.get_pos())
 
     pygame.display.flip()
-    clock.tick(30)
+    clock.tick(60)
